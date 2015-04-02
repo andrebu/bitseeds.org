@@ -228,7 +228,7 @@ var ProdoTheme = {
 		// Scroll to Anchor Links
 		jQuery( 'a[href^=#]' ).click( function( evt ) {
 			if ( jQuery( this ).attr( 'href' ) != '#' && ! jQuery( evt.target ).parent( ).parent( ).is( '.navbar-nav' ) && ! jQuery( this ).attr( 'data-toggle' ) ) {
-				jQuery( document ).scrollTo( jQuery( this ).attr( 'href' ), ProdoOptions.scrollSpeed, { offset: { top: -65, left: 0 } } );
+				jQuery( document ).scrollTo( jQuery( this ).attr( 'href' ), ProdoOptions.scrollSpeed, { offset: { top: -50, left: 0 } } );
 				evt.preventDefault( );
 			}
 		} );
@@ -239,7 +239,7 @@ var ProdoTheme = {
 				currentClass: 'current-menu-item',
 				changeHash: false,
 				scrollSpeed: ProdoOptions.scrollSpeed,
-				scrollOffset: 64,
+				scrollOffset: 50,
 				scrollThreshold: 0.5,
 				filter: 'li a[href^=#]',
 				begin: function( ) {
@@ -251,7 +251,7 @@ var ProdoTheme = {
 		if ( document.location.hash && ProdoOptions.loader ) {
 			if ( ! /\?/.test( document.location.hash ) ) {
 				jQuery( window ).load( function( ) {
-					jQuery( window ).scrollTo( document.location.hash, 0, { offset: { top: -65, left: 0 } } );
+					jQuery( window ).scrollTo( document.location.hash, 0, { offset: { top: -50, left: 0 } } );
 				} );
 			}
 		}
@@ -798,7 +798,7 @@ var ProdoTheme = {
 		jQuery( 'a[href*="#view-"]' ).not( '[data-url]' ).click( function( ) {
 			var $item = jQuery( '[rel="' + jQuery( this ).attr( 'href' ).split( '#' ).pop( ).substr( 5 ) + '"]' );
 			if ( $item.length > 0 ) {
-				jQuery( document ).scrollTo( '#portfolio', ProdoOptions.scrollSpeed, { offset: { top: -65, left: 0 }, onAfter: function( ) {
+				jQuery( document ).scrollTo( '#portfolio', ProdoOptions.scrollSpeed, { offset: { top: -50, left: 0 }, onAfter: function( ) {
 					$item.find( '.href a' ).trigger( 'click' );
 				} } );
 			}
