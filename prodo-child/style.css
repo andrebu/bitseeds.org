@@ -29,6 +29,63 @@ X. Site Wide
 .img-responsive {
 	width: 100%;
 }
+.breakWithMargins {
+	margin: 30px 0;
+}
+.breakWithMargins-double {
+	margin: 60px 0;
+}
+/*
+.dropcap { 
+	float: left; 
+	color: #903; 
+	font-size: 75px; 
+	line-height: 60px; 
+	padding-top: 4px; 
+	padding-right: 8px; 
+	padding-left: 3px; 
+	font-family: Georgia; 
+}
+*/
+.col-centered{
+    float: none !important;
+    margin: 0 auto;
+}
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
 
 
 
@@ -38,7 +95,7 @@ X. Site Wide
 	text-align:center;
 	color:#2185c5;
 	text-transform: uppercase;
-	text-shadow: 0 1px 2px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.2);
+	text-shadow: 0 1px 2px rgba(0,0,0,0.1),0 3px 7px rgba(0,0,0,0.2);
 }
 .textAlignCenter {
 	text-align:center;
@@ -56,7 +113,7 @@ hr {
 
 /* 2.  Navbar Edits */
 body .navbar.two {
-	padding: 10px 0;
+	padding: 11px 0 10px;
 }
 body .navbar.two .navbar-brand {
 	padding-top: 3px;
@@ -346,12 +403,43 @@ h1.animate.complete {
 /* Responsive */
 @media (max-width: 767px) {
 	#contact .twitterContainer {
-		position: inherit;
-		left: -17%;
+		position: relative;
+		left: -8%;
 		top: 0;
   	}
 	#contact div.col-md-4 {
 		top: 0;
 	}
 }
+@media (max-width: 767px) and (orientation: landscape) {
+	#contact .twitterContainer {
+		position: inherit;
+		left: 0;
+		top: 0;
+		margin: 0 auto;
+  	}
+}
 
+
+
+
+
+/* Extra Pages */
+
+/* Wallet page */
+.page-id-3544 .navbar.two .navbar-nav > li a,
+.page-id-3544 .navbar.two .social i {
+	color: #999;
+}
+.section .container header .info.breadcrumbs {
+	display: none;
+}
+.btnCol .btn {
+	margin: 0 auto;
+	display: block;
+	width: 92%;
+}
+.setWalletPassphrase p,
+.changeWalletPassphrase p {
+	line-height: initial;
+}
