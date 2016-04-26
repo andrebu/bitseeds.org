@@ -139,6 +139,7 @@ class ProdoTheme {
 					}
 					
 					if ( $post_content !== null ) {
+						$id      = ( $post !== null ) ? $post->post_name : '';
 						$current = apply_filters( 'the_content', do_shortcode( stripslashes( $post_content ) ) );
 
 						if ( substr_count( $current, '<section' ) < 1 ) {
@@ -173,13 +174,18 @@ class ProdoTheme {
 								$after = '<div><div class="section offsetTop offsetBottomL" id="portfolio-details"></div></div>';
 							}
 
-							$id = ( $post !== null ) ? $post->post_name : '';
 							$output .= self::sectionWrapper( $sections['layout'][$i], $current, $atts, $id, $addClass, $classes );
 
 							if ( ! empty( $after ) ) {
 								$output .= $after;
 							}
 						} else {
+							// Version 1.6
+							if ( substr_count( $post_content, '[map]' ) > 0 ) {
+								$current = str_replace( 'class="section map"', 'id="' . esc_attr( $id ) . '" class="section map"', $current );
+							}
+							// End
+
 							$output .= $current;
 						}
 					}

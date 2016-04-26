@@ -226,9 +226,9 @@ var ProdoTheme = {
 		} );
 
 		// Scroll to Anchor Links
-		jQuery( 'a[href^=#]' ).click( function( evt ) {
+		jQuery( "a[href^='#']" ).click( function( evt ) {
 			if ( jQuery( this ).attr( 'href' ) != '#' && ! jQuery( evt.target ).parent( ).parent( ).is( '.navbar-nav' ) && ! jQuery( this ).attr( 'data-toggle' ) ) {
-				jQuery( document ).scrollTo( jQuery( this ).attr( 'href' ), ProdoOptions.scrollSpeed, { offset: { top: -50, left: 0 } } );
+				jQuery( document ).scrollTo( jQuery( this ).attr( 'href' ), ProdoOptions.scrollSpeed, { offset: { top: -85, left: 0 } } );
 				evt.preventDefault( );
 			}
 		} );
@@ -239,9 +239,9 @@ var ProdoTheme = {
 				currentClass: 'current-menu-item',
 				changeHash: false,
 				scrollSpeed: ProdoOptions.scrollSpeed,
-				scrollOffset: 50,
+				scrollOffset: 85,
 				scrollThreshold: 0.5,
-				filter: 'li a[href^=#]',
+				filter: "li a[href^='#']",
 				begin: function( ) {
 					collapseMenu( );
 				}
@@ -251,7 +251,7 @@ var ProdoTheme = {
 		if ( document.location.hash && ProdoOptions.loader ) {
 			if ( ! /\?/.test( document.location.hash ) ) {
 				jQuery( window ).load( function( ) {
-					jQuery( window ).scrollTo( document.location.hash, 0, { offset: { top: -50, left: 0 } } );
+					jQuery( window ).scrollTo( document.location.hash, 0, { offset: { top: -85, left: 0 } } );
 				} );
 			}
 		}
@@ -798,7 +798,7 @@ var ProdoTheme = {
 		jQuery( 'a[href*="#view-"]' ).not( '[data-url]' ).click( function( ) {
 			var $item = jQuery( '[rel="' + jQuery( this ).attr( 'href' ).split( '#' ).pop( ).substr( 5 ) + '"]' );
 			if ( $item.length > 0 ) {
-				jQuery( document ).scrollTo( '#portfolio', ProdoOptions.scrollSpeed, { offset: { top: -50, left: 0 }, onAfter: function( ) {
+				jQuery( document ).scrollTo( '#portfolio', ProdoOptions.scrollSpeed, { offset: { top: -85, left: 0 }, onAfter: function( ) {
 					$item.find( '.href a' ).trigger( 'click' );
 				} } );
 			}
@@ -832,7 +832,7 @@ var ProdoTheme = {
 
 		if ( jQuery( '.section.video' ).length > 0 ) {
 			var tag = document.createElement( 'script' );
-			tag.src = "http://www.youtube.com/player_api";
+			tag.src = "https://www.youtube.com/player_api";
 			var firstScriptTag = document.getElementsByTagName( 'script' )[0];
 			firstScriptTag.parentNode.insertBefore( tag, firstScriptTag );
 
@@ -1525,7 +1525,7 @@ function shareTo( network, title, image, url ) {
 }
 
 // Video Background for Sections
-function onYouTubeIframeAPIReady( ) {
+function onYouTubePlayerAPIReady( ) {
 	jQuery( '.section.video' ).each( function( index ) {
 		var $that = jQuery( this ), currentId = 'video-background-' + index;
 		jQuery( '<div class="video-responsive"><div id="' + currentId + '"></div></div>' ).prependTo( $that );

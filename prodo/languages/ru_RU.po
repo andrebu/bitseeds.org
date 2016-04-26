@@ -1639,7 +1639,7 @@ msgstr ", "
 #~ msgid "Your message has already arrived! We'll contact you shortly."
 #~ msgstr "Сообщение было доставлено! Мы свяжемся с Вами в ближайшее время."
 
-#~ msgid "Goog day."
+#~ msgid "Good day."
 #~ msgstr "Отличного дня!"
 
 #~ msgid "All"

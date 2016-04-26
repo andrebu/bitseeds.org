@@ -521,9 +521,9 @@ if ( ! class_exists( 'ProdoRedux' ) ) {
 						'default'   => ''
 					),
 					array(
-						'id'        => 'social-dribble',
+						'id'        => 'social-reddit',
 						'type'      => 'text',
-						'title'     => __( 'Dribble Link', 'prodo' ),
+						'title'     => __( 'Reddit Link', 'prodo' ),
 						'desc'      => __( 'Paste link to your account', 'prodo' ),
 						'default'   => ''
 					),
@@ -549,9 +549,9 @@ if ( ! class_exists( 'ProdoRedux' ) ) {
 						'default'   => ''
 					),
 					array(
-						'id'        => 'social-picasa',
+						'id'        => 'social-github',
 						'type'      => 'text',
-						'title'     => __( 'Picasa Link', 'prodo' ),
+						'title'     => __( 'GitHub Link', 'prodo' ),
 						'desc'      => __( 'Paste link to your account', 'prodo' ),
 						'default'   => ''
 					),
