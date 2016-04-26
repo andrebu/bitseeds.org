@@ -340,6 +340,9 @@ h1.animate.complete {
 #specs-features .services .offsetTopL {
 	padding-top: 0;
 }
+.services i.fa {
+    color: #46B57D;
+}
 
 /* Rethink Replant Renew */
 #rethink-replant-renew .rethinkReplantRenew {
